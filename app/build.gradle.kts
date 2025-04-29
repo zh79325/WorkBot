@@ -1,6 +1,5 @@
 import java.util.*
 import java.io.File
-
 plugins {
     id("com.android.application")
     id("kotlin-android")
@@ -8,7 +7,6 @@ plugins {
     id("com.jakewharton.butterknife")
     id("kotlin-kapt")
 }
-
 val AAVersion = "4.5.2"
 //val SupportLibVersion = "28.0.0"
 
@@ -26,6 +24,18 @@ if (propFile.exists()) {
 //        force("com.android.support:support-v4:${SupportLibVersion}")
 //    }
 //}
+object versions {
+    const val appVersionCode=643
+    const val appVersionName= "6.4.3"
+    const val devVersionCode= 643
+    const val devVersionName= "6.4.3"
+    const val target= 26
+    const val mini= 21
+    const val compile= 32
+    const val buildTool= "32.0.0"
+    const val IDE= "Android Studio Bumblebee | 2021.1.1"
+    const val JDK= "15"
+}
 android {
     buildToolsVersion = versions.buildTool
     compileSdk = versions.compile
@@ -183,7 +193,7 @@ dependencies {
     implementation("com.google.accompanist:accompanist-insets-ui:$accompanist_version")
     implementation("com.google.accompanist:accompanist-systemuicontroller:$accompanist_version")
     implementation("com.google.accompanist:accompanist-webview:$accompanist_version")
-
+    val compose_version = "1.8.0"
     implementation("androidx.compose.ui:ui:$compose_version")
     implementation("androidx.compose.material:material:$compose_version")
     implementation("androidx.compose.ui:ui-tooling-preview:$compose_version")
