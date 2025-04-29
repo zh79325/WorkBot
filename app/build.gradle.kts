@@ -32,7 +32,7 @@ object versions {
     const val target= 26
     const val mini= 21
     const val compile= 32
-    const val buildTool= "32.0.0"
+    const val buildTool= "36.0.0"
     const val IDE= "Android Studio Bumblebee | 2021.1.1"
     const val JDK= "15"
 }
@@ -56,7 +56,7 @@ android {
             }
         }
         ndk {
-            abiFilters.addAll(listOf("arm64-v8a", "armeabi-v7a"))
+            abiFilters.addAll(listOf("arm64-v8a", "armeabi-v7a","x86_64"))
         }
     }
     buildFeatures {
@@ -99,7 +99,7 @@ android {
             reset()
 
             // Specifies a list of ABIs that Gradle should create APKs for.
-            include("armeabi-v7a", "arm64-v8a")
+            include("armeabi-v7a", "arm64-v8a", "x86_64")
 
             // Specifies that we do not want to also generate a universal APK that includes all ABIs.
             isUniversalApk = true

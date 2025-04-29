@@ -22,7 +22,7 @@ object versions {
     const val target= 26
     const val mini= 21
     const val compile= 32
-    const val buildTool= "32.0.0"
+    const val buildTool= "36.0.0"
     const val IDE= "Android Studio Bumblebee | 2021.1.1"
     const val JDK= "15"
 }
@@ -100,7 +100,7 @@ android {
         create("common") {
             buildConfigField("boolean", "isMarket", "false")
             manifestPlaceholders.putAll(mapOf("appName" to "inrt"))
-            ndk.abiFilters.addAll(listOf("armeabi-v7a", "arm64-v8a"))
+            ndk.abiFilters.addAll(listOf("armeabi-v7a", "arm64-v8a","x86_64"))
         }
         create("template") {
             manifestPlaceholders.putAll(mapOf("appName" to "template"))

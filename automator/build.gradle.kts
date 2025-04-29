@@ -11,7 +11,7 @@ object versions {
     const val target= 26
     const val mini= 21
     const val compile= 32
-    const val buildTool= "32.0.0"
+    const val buildTool= "36.0.0"
     const val IDE= "Android Studio Bumblebee | 2021.1.1"
     const val JDK= "15"
 }
